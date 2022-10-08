@@ -1,0 +1,185 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: sans-serif;
+}
+.option{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+}
+.option div{
+    background: white;
+    flex-basis: calc(100% / 3 - 20px);
+    height: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 50px;
+    color: white;
+    border-radius: 6px;
+    opacity: .9;
+    cursor: pointer;
+}
+@media(max-width:767px){
+    .option div{
+        font-size: 35px;
+        height: 30%;
+    }
+}
+@media(max-width:600px){
+    .option div{
+        font-size: 25px;
+        height: 25%;
+    }
+}
+.option div:first-child{
+    background-color: green;
+}
+.option div:nth-child(2){
+    background-color: #2176f1;
+}
+.option div:last-child{
+    background-color: red;
+}
+
+.speed-letter{
+    height: 100vh;
+    background-color: #eee;
+}
+.speed-letter .type{
+    background: #2196f3;
+    text-align: center;
+    font-size: 30px;
+    color: white;
+    padding: 20px;
+}
+
+.speed-letter .container{
+    max-width: 700px;
+    margin: 20px auto;
+}
+.speed-letter .container .game{
+    padding: 15px;
+    background: white;
+    text-align: center;
+    border-radius: 6px;
+    margin-bottom: 10px;
+}
+.speed-letter .container .game .game-p {
+    line-height: 1.8;
+}
+.speed-letter .container .game .game-p span::before{
+    content: "[ ";
+    color: rgb(147, 252, 147);
+}
+.speed-letter .container .game .game-p span::after{
+    content: " ]";
+    color: rgb(147, 252, 147);
+}
+.speed-letter .container .game .game-p span{
+    font-weight: bold;
+    color: #2196f3;
+}
+.speed-letter .container button{
+    display: block;
+    width: 100%;
+    background: #009688;
+    border: none;
+    border-radius: 6px;
+    margin: 10px auto;
+    color: white;
+    font-size: 20px;
+    cursor: pointer;
+    padding: 15px;
+}
+.speed-letter .container .select{
+    padding: 15px;
+    text-align: center;
+    font-size: 50px;
+    color: #2176f1;
+    user-select: none;
+}
+.speed-letter .container input{
+    width: 100%;
+    padding: 15px;
+    text-align: center;
+    outline: none;
+    font-size: 15px;
+    border:2px solid #2196f3;
+    border-radius: 6px;
+}
+.speed-letter .container .words{
+    padding: 15px;
+    text-align: center;
+    background: white;
+    margin: 10px auto;
+    border-radius: 6px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.speed-letter .container .words span{
+    background: #2196f3;
+    padding: 5px;
+    color: white;
+    border-radius: 6px;
+    margin-bottom: 10px;
+    width: fit-content;
+    margin-left: 5px;
+}
+.speed-letter .container .score{
+    display: flex;
+    justify-content: space-between;
+    background: white;
+    padding: 15px;
+    border-radius: 6px;
+}
+.speed-letter .container .score p{
+
+}
+.speed-letter .container .score p span{
+    color: #2196f3;
+    font-weight: bold;
+}
+.result .winner,
+.result .loser{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50%;
+    width: 50%;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    border-radius: 6px;
+    color: white;
+    font-weight: bold;
+    font-size: 40px;
+    text-align: center;
+    transition: 1s;
+    z-index: -1;
+}
+@media(max-width:600px){
+    .result .winner,
+    .result .loser{
+        width: 100%;
+        height: 35%;
+
+    }
+}
+.result .winner{
+    background-color: #2176f1;
+    opacity: 0;
+}
+.result .loser{
+    background-color: red;
+    opacity: 0;
+}
