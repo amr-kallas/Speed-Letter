@@ -28,7 +28,7 @@ let ArrayWord = [
   "Hozaifa",
   "Alahmad",
   "AbdulRahman",
-  "Kanawait",
+  "Kanawati",
   "Bahaa",
   "Abdo",
   "Abdullah",
@@ -110,6 +110,7 @@ function playGame() {
         container.style.display = "none";
         winner.style.opacity = "1";
         winner.style.zIndex = "4";
+        loser.style.display = "none";
       }
     }
   }, 1000);
